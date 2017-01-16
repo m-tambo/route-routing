@@ -4,13 +4,21 @@ let app = angular.module('highways', ['ngRoute'])
 app.config( function($routeProvider) {
    $routeProvider
       .when('/', {
+         controller: 'mainCtrl',
+         templateUrl: 'partials/main.html'
+      })
+      .when('/blue-ridge-pkwy', {
          controller: 'blueCtrl',
          templateUrl: 'partials/brp.html'
       })
-      .when('/pacific', {
+      .when('/pacific-coast-hwy', {
          controller: 'pacificCtrl',
          templateUrl: 'partials/pch.html'
       })
+})
+
+app.controller('mainCtrl', function() {
+
 })
 
 app.controller('blueCtrl', function($scope) {
