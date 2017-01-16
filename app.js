@@ -15,6 +15,9 @@ app.config( function($routeProvider) {
          controller: 'pacificCtrl',
          templateUrl: 'partials/pch.html'
       })
+      .otherwise({
+         redirectTo: '/'
+      })
 })
 
 app.controller('mainCtrl', function() {
